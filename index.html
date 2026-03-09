@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Lenguajes Formales</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1 class="main-title">Calculadora Lenguajes Formales</h1>
+
+    <div class="modal-container">
+        <header class="top-nav">
+            <div class="nav-buttons" id="main-nav">
+                <button data-seccion="alfabeto">Alfabeto</button>
+                <button data-seccion="cadena">Cadena</button>
+                <button data-seccion="lenguaje">Lenguaje</button>
+            </div>
+            <button id="btn-limpiar">Limpiar</button>
+        </header>
+
+        <div class="main-layout">
+            <aside id="sidebar" class="sidebar">
+                <p class="placeholder-text">Selecciona una categoría arriba</p>
+            </aside>
+
+            <main class="content">
+                <h3 id="titulo-operacion">Bienvenido</h3>
+                <hr>
+                <div id="inputs-container">
+                    <p>Selecciona una operación de la izquierda para comenzar.</p>
+                </div>
+                <div id="resultado-container" style="display: none;">
+                    <div id="resultado-texto"></div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
