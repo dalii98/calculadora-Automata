@@ -223,3 +223,67 @@ input:focus {
 .ayuda-input b {
     color: #2980b9;
 }
+
+.descripcion-operacion {
+    font-size: 0.95rem;
+    font-weight: normal;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    border-left: 3px solid #007bff;
+    padding-left: 10px;
+}
+
+/* Contenedor del icono */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* El globo de texto estilo "Barra" */
+.tooltip-text {
+    visibility: hidden;
+    /* Ancho fijo o máximo para que se expanda a los lados */
+    width: 280px; 
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    padding: 8px 12px;
+    
+    /* Posicionamiento centrado respecto al icono */
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); /* Centrado absoluto sobre el icono */
+    
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+    pointer-events: none; /* Para que no estorbe si el mouse pasa por encima */
+    font-size: 0.85rem;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.4);
+    border: 1px solid #555;
+}
+
+/* Mostrar y expandir al pasar el mouse */
+.tooltip-container:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); /* Efecto de crecimiento */
+}
+
+.icon-info {
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 22px;
+    height: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: help;
+}
